@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>VIẾT THƯ</h1>
+            <input type="text" placeholder="Nhập tên" id="name">    <!--0-->   
+            <input type="text" placeholder="Nhập địa chỉ" id="adress"> <!--1--> 
+            <input type="date" placeholder="Nhập ngày" id="date">   <!--2--> 
+            <button onclick="writeLetter ()">Tạo</button>
+            <div id="result"></div>
+    </center>    
+</body>
+</html>
+<script>
+    function writeLetter () {
+        let arr = document.getElementsByTagName('input');
+        let name = arr[0].value;
+        let adress = arr[1].value;
+        let date = arr[2].value;
+        if (name == "" || adress == "" || date == "") {
+            alert("Vui long nhap day du thong tin");
+        } else {
+            let result = "Lau qua roi khong gap " + name + " nhi! Ngay " + date + " toi co chuyen cong tac o " + adress + ", va se co 3 ngay o lai, sap xep gap nhau cafe buoi toi nhe! Hen gap lai!" ;
+            document.getElementById("result").innerHTML = result;
+        }
+    }
+</script>
