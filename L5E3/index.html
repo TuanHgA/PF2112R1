@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>BANG TINH TIEN VAY NGAN HANG</h1>
+        <p><b><i>(Theo phuong phap tinh lai don)</i></b></p>
+        <br>
+        <table>
+            <tr>
+                <th style="text-align:left">Khoan vay</th>
+                <td><input type="number" placeholder="VND" id="cash"></td>
+            </tr>
+            <tr>
+                <th style="text-align:left">Lai suat</th>
+                <td><input type="number" placeholder="%/Nam" id="interestRate"></td>
+            </tr>
+            <tr>    
+                <th style="text-align:left">Thoi gian vay</th>
+                <td>
+                    <select id="schedule">
+                        <option id="default">nam</option>
+                        <option name="A">1</option>
+                        <option name="B">2</option>
+                        <option name="C">3</option>
+                        <option name="D">4</option>
+                        <option name="E">5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><button onclick="restar()">Reset</button></th>
+                <th><button onclick="interest()">Xem ket qua</button></th>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <th style="text-align:left">Lai suat moi nam:</th>
+                <td style="text-align:right"><div id="Kq1"></div></td>
+            </tr>
+            <tr>
+                <th style="text-align:left">Tong so tien phai tra:</th>
+                <td style="text-align:right"><div id="Kq2"></div></td>
+            </tr>
+        </table>
+        <form action=""></form>
+    </center>
+
+
+</body>
+</html>
+<script>
+    function interest() {
+        let khoanVay = Number(document.getElementById("cash").value);
+        let laiSuat = Number(document.getElementById("interestRate").value)/100;
+        let thoiGian = Number(document.getElementById("schedule").value);
+        if (khoanVay=="" || laiSuat=="" || thoiGian=="") {
+            alert("Anh em nhap thieu thong tin roi!");            
+        } else {
+            let tienLai = khoanVay * laiSuat;
+            let phaiTra = khoanVay + tienLai*thoiGian;
+            tienLai = tienLai.toLocaleString('vi-VN', {
+                style: 'currency',
+                currency: 'VND'
+                });
+            phaiTra = phaiTra.toLocaleString('vi-VN', {
+                style: 'currency',
+                currency: 'VND'
+                });
+            // console.log(tienLai);
+            // console.log(phaiTra);
+            document.getElementById("Kq1").innerHTML = tienLai;
+            document.getElementById("Kq2").innerHTML = phaiTra;
+        }
+        
+
+    }
+
+    function restar() {
+        document.getElementById("schedule").value = document.getElementById("default").value;
+        document.getElementById("cash").value = "";
+        document.getElementById("interestRate").value = "";
+    }
+</script>
