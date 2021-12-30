@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tank Game</title>
+    <!-- <link type="text/css" rel="stylesheet" href="./tankGame.css"/> -->
+</head>
+<body >
+    <div id="container">
+        <!-- <div class="Field"></div>
+        <div class="Pawn"></div>
+        <div class="Queen"></div>
+        <div class="Crown"></div> -->
+        <img 
+            src="./BattleF.jpg" 
+            style="border: 1px solid black; width: 560px; height: 560px; position: absolute; top: 0px; left: 0px;" 
+            id="001"
+        >
+        <img 
+            src="./Pawn.png"
+            style="top: 0px; left: 0px; position: absolute; top: 0px; left: 0px;"  
+            id="002"
+        >
+        <img 
+            src="./Crown.png"
+            style="top: 0px; left: 0px; position: absolute; top: 350px; left: 280px;"  
+            id="003"
+        >            
+    </div>
+    <div style="top: 0px; left: 0px; position: absolute; top: 200px; left: 700px; height: 300px; width: 300px;">
+        <table style="height: 300px; width: 300px;">
+            <tr>
+              <td></td>
+              <td>
+                <button onclick="moveUp()" style="height: 50px; width: 50px;">⬆</button>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="moveLeft()" style="height: 50px; width: 50px;">⬅</button></td>
+              <td></td>
+              <td>
+                <button onclick="moveRight()" style="height: 50px; width: 50px;">➡</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <button onclick="moveDown()" style="height: 50px; width: 50px;">⬇</button></td>
+              <td></td>
+            </tr>
+          </table>
+    </div>
+</body>
+</html>
+<script>
+    function Change() {
+        let x = parseInt(document.getElementById("002").style["top"]);
+        let y = parseInt(document.getElementById("002").style["left"]);
+        if (x==parseInt(document.getElementById("003").style["top"]) && y==parseInt(document.getElementById("003").style["left"])) {
+            document.getElementById("002").src="./Queen.png";
+            document.getElementById("001").src="./BattleF1.jpg";
+            document.getElementById("003").src="";
+        }
+    }
+    function moveDown() {
+        let S = parseInt(document.getElementById("002").style["top"]);
+        if (S<490) {document.getElementById("002").style["top"] = S + 70 + "px"};
+        Change();
+    }
+    function moveUp() {
+        let W = parseInt(document.getElementById("002").style["top"]);
+        if (W>0){document.getElementById("002").style["top"] = W - 70 + "px"} ;
+        Change();
+    }
+    function moveRight() {
+        let D = parseInt(document.getElementById("002").style["left"]);
+        if (D<490){document.getElementById("002").style["left"] = D + 70 + "px"} ;
+        Change();
+    }
+    function moveLeft() {
+        let A = parseInt(document.getElementById("002").style["left"]);
+        if (A>0){document.getElementById("002").style["left"] = A - 70 + "px"} ;
+        Change();
+    }
+    
+</script>
