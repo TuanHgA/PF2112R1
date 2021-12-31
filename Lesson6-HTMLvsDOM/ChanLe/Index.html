@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Nhap so can kiem tra</th>
+            <th><input id="ip" type="number"></th>
+        </tr>
+        <tr><th><br></th></tr>
+        <tr >
+            <th colspan="2"><button onclick="kiemTra()">---Ket qua---</button></th>
+            <th></th>
+        </tr>
+        <tr><th><br></th></tr>
+        <tr>
+            <th colspan="2"><div id="kq"></div></th>
+            <th></th>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+    function kiemTra() {
+        if ( parseInt(document.getElementById('ip').value)%2==0 ) {
+            document.getElementById("kq").innerHTML = document.getElementById('ip').value + " la so chan!";
+        } else {
+            document.getElementById("kq").innerHTML = document.getElementById('ip').value + " la so le!";
+        }
+    }
+</script>
