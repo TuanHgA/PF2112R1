@@ -1,0 +1,31 @@
+.container {
+    position: absolute;
+}
+
+#full {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#block1 {
+    position: absolute;
+    top: 130px;
+    left: 321px;
+    background-color: #27edef;
+    border-radius: 20px;
+}
+#block2 {
+    position: absolute;
+    top: 130px;
+    left: 165px;
+    border-radius: 20px;
+    width: 120px;
+    text-align: right;
+}
+#block3 {
+    position: absolute;
+    top: 255px;
+    left: 196px;
+    font-weight: bold;
+}
+

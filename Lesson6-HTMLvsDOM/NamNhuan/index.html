@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div>
+        <img src="./126.jpg" id="full">
+        <button id="block1" onclick="ketqua()">Xem ket qua</button>
+        <input type="number" placeholder="Nhap nam tim kiem" id="block2">
+        <div><p id="block3"></p></div>
+    </div>
+    
+</body>
+</html>
+<script>
+    function ketqua() {
+        let x = parseInt(document.getElementById("block2").value);
+        console.log(x);
+        if (x%400==0 || (x%4==0 && x%100!=0)) { document.getElementById("block3").innerHTML="nam nhuan";}
+            else {document.getElementById("block3").innerHTML="khong nhuan";}
+    }
+</script>
