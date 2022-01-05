@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <table id="container">
+        <tr>
+            <th colspan="2">TINH DIEM DAI HOC KHOI D</th>
+            <th></th>
+        </tr>
+        <tr><th><br></th></tr>
+        <tr>
+            <th style="text-align: left;" >Mon Toan</th>
+            <td>  <input placeholder="Diem so" type="number" id="Toan" style="text-align: center;" > </td>
+        </tr>
+        <tr>
+            <th style="text-align: left;" >Mon Van</th>
+            <td>  <input placeholder="Diem so" type="number" id="Van" style="text-align: center;" > </td>
+        </tr>
+        <tr>
+            <th style="text-align: left;" >Mon Anh</th>
+            <td>  <input placeholder="Diem so" type="number" id="Anh" style="text-align: center;" > </td>
+        </tr>
+        <tr>
+            <th style="text-align: left;">Khu vuc</th>
+            <td> 
+                <select id="khuV">
+                    <option selected hidden>--Uu tien--</option>
+                    <option value="kV1">KV1</option>
+                    <option value="kV2">KV2</option>
+                    <option value="kV3">KV3</option>
+                    <option value="kV4">KV4</option>
+                </select>    
+            </td>
+        </tr>
+        <tr><th><br></th></tr>
+        <tr>
+            <th style="text-align: center;"><button onclick="ketQua()">Click xem ket qua</button></th>
+            <td id="result" style="text-align: center; color: silver;"><div >"Noi hien ket qua!"</div></td>
+        </tr>
+    </table>
+</body>
+</html>
+
+<script src="./main.js"></script>
