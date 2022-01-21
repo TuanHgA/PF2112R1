@@ -1,0 +1,26 @@
+#container {
+    width: 50vw;
+    height: 80vh;
+    background-color: #e4b400;
+    border-left: 2px;
+    border-right: 2px;
+    text-align: center;
+    padding-top: 3px;
+}
+#caroGame {
+    background-color: #81aef1;
+    width: 90%;
+    height: 50%;
+    border-left: 2px;
+    border-right: 2px;
+    margin: auto 5%;
+}
+#position {
+    background-color: #2fd71e;
+    width: auto;
+    height: 40px;
+}
+div div input {
+    margin: 10px;
+    text-align: center;
+}

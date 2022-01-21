@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="container">
+        <P style="text-decoration: underline; font-weight: bolder; font-size: 30px;">CaroGame</P>
+        <div id="caroGame"></div>
+        <br>
+        <div id="position">
+            <input style="width: 5em" type="number" id="Oy" placeholder="toa do x">
+            <input style="width: 5em" type="number" id="Ox" placeholder="toa do y">
+        </div>
+        <br>
+        <Button onclick="playerX()">Player (-X-) </Button>
+        <button onclick="playerO()">Player (-O-) </button>
+        <br> <br>
+        <div id="result">The battle is going on...</div>
+    </div>
+</body>
+</html>
+
+<script src="./main.js"></script>
