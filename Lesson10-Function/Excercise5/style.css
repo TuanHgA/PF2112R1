@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding-left: 10px;
+}
+table, th, td{
+    border-bottom: 2px;
+    border-top: 2px;
+    border-color:solid #868585;
+    padding: 10px;
+}
+/* table{
+    border-collapse:collapse;
+    width: 670px;
+}
+#topTitle tr:nth-child(odd){
+    background-color:#eee;
+}
+#topTitle tr:nth-child(even){
+    background-color:white;
+}
+#topTitle tr:nth-child(1) {
+    height: 70px;
+    background-color: #2fb23b;
+    vertical-align: auto;
+} */
